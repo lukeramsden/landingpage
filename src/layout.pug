@@ -1,0 +1,31 @@
+//- layout.pug
+block variables
+//- title?: ?boolean,
+doctype html
+html(lang="en")
+  head
+    title UK Recruitment Ltd #{title && ' - ' + title}
+    block meta
+      meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block styles
+      link(href="styles/core.scss", rel="stylesheet")
+  body
+    nav#top-nav-container
+      a#top-nav-toggler(href="javascript:void(0);")
+        svg.feather(xmlns:xlink="http://www.w3.org/1999/xlink" onClick="window.toggleDataOpen(this.parentElement)")
+          use(xlink:href="../node_modules/feather-icons/dist/feather-sprite.svg#menu")
+      ul#top-nav-item-container
+        li#top-nav-item
+          a(href="/" current=page && page === 'home') Home
+        //- li#top-nav-item
+        //-   a(href="/" current=page && page === 'whatwedo') What We Do
+        //- li#top-nav-item
+        //-   a(href="/" current=page && page === 'getintouch') Get In Touch
+    block content
+    footer.container-fluid
+      block footer
+        p UK Recruitment LTD 
+          = new Date().getFullYear()
+          |  - All Rights Reserved
+    block scripts
+      script(src="/scripts/core.js")

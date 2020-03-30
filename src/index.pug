@@ -1,0 +1,35 @@
+//- index.pug
+extends layout
+
+block variables
+  - const page = 'home'
+  - const title = null
+
+append styles
+  link(rel="stylesheet", href="styles/index.scss")
+
+block content
+  #index-container.container-fluid
+    #jumbo-container
+      #map
+        .spinner
+      #map-popup 
+        address#map-popup-content
+          a#map-popup-content-physical-address(href="https://www.google.com/maps/place/Westminster,+London+SW1A+0AA/@51.4998394,-0.1334175,15z/data=!3m1!4b1!4m5!3m4!1s0x487604c40d42db91:0x7a21a6431acc52a1!8m2!3d51.4998403!4d-0.1246627", target="_blank")
+            b Office HQ
+            br
+            | Business Street
+            br
+            | SW1A 0AA
+            br
+            | London
+            br
+          a#map-popup-content-email-address(href="mailto:")
+            em info@recruitment.com
+      #title-container.container
+        h1 UK Recruitment Ltd
+        h2 For all your recruitment needs
+
+append scripts
+  script(src="/scripts/index.js")
+  

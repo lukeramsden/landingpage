@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "build": "parcel build src/index.pug",
+    "start": "parcel src/index.pug"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "htmlnano": "^0.2.5",
+    "husky": "^4.2.3",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "pug": "^2.0.4",
+    "sass": "^1.26.3",
+    "terser": "^4.6.7"
+  },
+  "dependencies": {
+    "feather-icons": "^4.26.0",
+    "img": "^3.0.3",
+    "normalize.css": "^3.0.0",
+    "ol": "^6.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}
